@@ -1,2 +1,2 @@
-# lamp-small
-Low traffic LAMP stack
+# lamp-dev
+Single Server LAMP stack

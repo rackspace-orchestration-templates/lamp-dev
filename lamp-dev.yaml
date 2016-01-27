@@ -147,8 +147,8 @@ resources:
         holland_create_user: "yes"
         phpmyadmin_install: { get_param: php_myadmin }
         phpmyadmin_host: "localhost"
-        phpmyadmin_user: { get_param: db_user }
-        phpmyadmin_pass: { get_attr: [database_pass, value] }
+        phpmyadmin_user: root
+        phpmyadmin_pass: { get_attr: [root_pass, value] }
         firewall_global_rules: [ "0.0.0.0,0,22,tcp", "0.0.0.0,0,80,tcp", "0.0.0.0,0,443,tcp"]
         firewall_node_rules: []
       config:
