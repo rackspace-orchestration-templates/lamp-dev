@@ -51,7 +51,7 @@ instructions: |
   and will be automatically synchronized to all secondary nodes.  By default,
   /var/www will be synchronized, unless otherwise specified during setup.
 
-  MySQL is being hosted on a Cloud Database instance, running MySQL 5.6.
+  MySQL is being hosted locally, running MySQL 5.6.
   Backups for MySQL are provided by [Holland](http://wiki.hollandbackup.org/),
   which is running on the Master server.
 
@@ -62,7 +62,7 @@ instructions: |
   In order to restore the Database from backup, you will need to first restore
   /var/spool/holland from the appropriate Cloud Backup.  After you have done so,
   you will need to log into the Master server and restore the Holland backup
-  to the Cloud Database via the MySQL client.  For more assistance, please
+  to the database via the MySQL client.  For more assistance, please
   contact your Support team.
 
   Monitoring is configured to verify that Apache is running on both the Master
@@ -85,10 +85,12 @@ instructions: |
   intended for production use**.
 user-input-required: true
 description: |
- A single Linux server running the latest version of
- [Apache](https://www.apache.org//),
- [PHP](http://www.php.net/).
- and [MySQL 5.6](http://www.mysql.com/about/).
+  #### Development
 
- **This deployment is meant for development and testing scenarios only and is not
- intended for production use**.
+  A single Linux server running the latest version of
+  [Apache](https://www.apache.org//),
+  [PHP](http://www.php.net/),
+  and [MySQL 5.6](http://www.mysql.com/about/).
+
+  **This deployment is meant for development and testing scenarios only and is not
+  intended for production use**.
