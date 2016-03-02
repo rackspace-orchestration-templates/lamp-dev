@@ -18,9 +18,13 @@ def check():
     assert process.is_up('apache2'), 'apache is not running'
     assert process.is_up('php5'), 'php is not running'
     assert service.is_enabled('apach2e'), 'apache is not enabled'
-    assert service.is_enabled('php5'), 'php is not enabled' 
+    assert service.is_enabled('php5'), 'php is not enabled'
 
 @task
 def artifacts():
   env.platform_family = detect.detect()
-  get_artifacts()
+  artifacts = ['/var/log/messages',
+              '/var/log/syslog',
+              '/var/log/cloud-init.log',
+              '/var/log/cloud-init-output.log']
+  get_artifacts(artifacts=artifacts)
