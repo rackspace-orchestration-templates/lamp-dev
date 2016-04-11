@@ -234,7 +234,8 @@ resources:
     type: Rackspace::Cloud::BackupConfig
     depends_on: lamp_server
     properties:
-      host_ip_address: { get_attr: [lamp_server, accessIPv4] }
+      #host_ip_address: { get_attr: [lamp_server, accessIPv4] }
+      server: { get_resource: lamp_server }
       BackupConfigurationName:
         str_replace:
           template: stack Weekly Backup
