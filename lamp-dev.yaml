@@ -19,7 +19,6 @@ parameter_groups:
   - php_myadmin
 - label: rax-dev-params
   parameters:
-  - server_image
   - ansible_source
 
 parameters:
